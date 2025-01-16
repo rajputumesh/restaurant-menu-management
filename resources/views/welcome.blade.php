@@ -41,7 +41,7 @@
                 <div class="col-12 col-sm-6 col-md-4 mb-3 mb-lg-2">
                     <a href="{{route('restaurent.menu', [$restaurant->id])}}">
                         <div class="curriculum-card">
-                            <img class="rounded" src="{{$restaurant->image}}" alt="{{$restaurant->name}}" style="width: 100%;">
+                            <img class="rounded" src="{{$restaurant->image}}" alt="{{$restaurant->name}}" style="width: 100%;height: 150px;">
                             <div class="curriculum-card-body pt-2">
                                 <h5 class="curriculum-card-title">{{$restaurant->name}}</h5>
                             </div>
