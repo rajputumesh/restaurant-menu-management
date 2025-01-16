@@ -14,7 +14,7 @@ Route::get('restaurent/menu/{id}', [FrontendController::class, 'menuList'])->nam
 Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
 
-    Route::group(['middleware' => ['auth']], function () {
+    Route::group(['middleware' => ['auth', 'autoLogout']], function () {
         Route::get('home', [AdminController::class, 'index'])->name('home');
         Route::get('dashboard', [HomeController::class, 'index'])->name('home');
         Route::get('/', [AdminController::class, 'admin'])->name('admin');
