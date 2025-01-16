@@ -17,7 +17,7 @@ class AutoLogout
     {
         if (auth()->check() && now()->diffInSeconds(session('last_active', now())) > 30) {
             auth()->logout();
-            return redirect('/login')->with('message', 'You have been logged out due to inactivity.');
+            return redirect('login')->with('message', 'You have been logged out due to inactivity.');
         }
 
         session(['last_active' => now()]);

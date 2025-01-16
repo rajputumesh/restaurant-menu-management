@@ -45,7 +45,7 @@ Access the application:
 
 Credentials:
 
-    Username: admin
+    Username: admin@gmail.com
     Password: password123
     Frontend: http://localhost:8000
 

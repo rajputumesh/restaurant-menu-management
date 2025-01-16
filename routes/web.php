@@ -12,10 +12,11 @@ Route::get('/', [FrontendController::class, 'index']);
 Route::get('restaurent/menu/{id}', [FrontendController::class, 'menuList'])->name('restaurent.menu');
 
 Auth::routes();
-Route::group(['prefix' => 'admin'], function () {
+Route::post('login', [HomeController::class, 'login']);
 
-    Route::group(['middleware' => ['auth', 'autoLogout']], function () {
-        Route::get('home', [AdminController::class, 'index'])->name('home');
+Route::group(['middleware' => ['auth', 'autoLogout']], function () {
+    Route::get('home', [AdminController::class, 'index'])->name('home');
+    Route::group(['prefix' => 'admin'], function () {
         Route::get('dashboard', [HomeController::class, 'index'])->name('home');
         Route::get('/', [AdminController::class, 'admin'])->name('admin');
         Route::resource('restaurant', RestaurantController::class);

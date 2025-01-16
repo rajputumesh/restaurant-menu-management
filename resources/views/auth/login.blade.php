@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('/')}}backend/vendors/styles/style.css" />
     <link rel="icon" href="{{asset('/')}}images/favicon.png" type="image/x-icon">
 </head>
+
 <body class="login-page">
     <div class="login-header box-shadow">
         <div class="container-fluid d-flex justify-content-between align-items-center">
@@ -76,6 +77,17 @@
             </div>
         </div>
     </div>
+
+    @if(Session::has('message'))
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        swal({
+            icon: "success",
+            title: "{{Session::get('message')}}",
+        });
+    </script>
+    @endif
+
 </body>
 
 </html>

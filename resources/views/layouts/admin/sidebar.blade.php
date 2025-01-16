@@ -1,7 +1,7 @@
 <div class="left-side-bar">
     <div class="brand-logo">
         <a href="{{url('admin')}}">
-            <img src="{{asset('images/logo.png')}}" alt="" class="dark-logo w-100 p-3" />
+            <img src="{{asset('images/logo.png')}}" alt="" class="w-100 p-3" />
         </a>
         <div class="close-sidebar" data-toggle="left-sidebar-close">
             <i class="ion-close-round"></i>

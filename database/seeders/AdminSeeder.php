@@ -14,7 +14,7 @@ class AdminSeeder extends Seeder
      */
     public function run(): void
     {
-        $admin = User::where('email', 'admin@gmail.com')->first();
+        $admin = User::where('email', 'admin@admin.com')->first();
         if (!$admin) {
             User::insert([
                 'name' => 'Admin',
