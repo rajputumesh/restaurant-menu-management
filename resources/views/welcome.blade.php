@@ -30,13 +30,13 @@
                 </a>
             </div>
         </div>
-        <marquee class="text-white h5" style="background: #015ca4; padding:18px 0px">
+        <marquee class="text-white h5" style="background: #015ca4; padding:10px 0px">
             Variety of flavours from american cuisine
         </marquee>
     </section>
     <section>
         <div class="container">
-            <div class="row g-2">
+            <div class="row g-2 py-5">
                 @foreach($restaurants as $restaurant)
                 <div class="col-12 col-sm-6 col-md-4 mb-3 mb-lg-2">
                     <a href="{{route('restaurent.menu', [$restaurant->id])}}">
@@ -53,20 +53,18 @@
         </div>
     </section>
     <section>
-        <div class="hero-section1 mt-4"
-            style="background: url('images/Building7.webp') center/cover no-repeat">
-            <div class="" style="background: #00000085;padding:5% 0px">
+        <div class="hero-section1"
+            style="background: url({{asset('images/demoimg.webp')}}) center/cover no-repeat">
+            <div class="" style="background: #000000a6;padding:11% 0 2% 0px">
                 <div class="container text-center">
-                    <h4 class="display-3 fw-bold text-white font-weight-bold"></h4>
+                    <h5 class="display-4 fw-bold text-white font-weight-bold">The 20 Best Restaurant Websites of 2025</h5>
                     <p class="mb-4 display-9 fw-600 text-white h4" style="line-height: 1.3em;">
-                        The School Session is in accordance with Central Board of Secondary Education (C.B.S.E.), New Delhi which is from April to March every year.
+                        Our annual roundup of the internet's best restaurant websites.
                     </p>
-                    <a href="{{url('contact')}}" class="btn btn-primary btn-lg fw-bold">GET ADMISSION</a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Certificates -->
 </main>
 
 @endsection
