@@ -40,7 +40,7 @@ php artisan migrate --seed
 Start the development server:
 php artisan serve
 
-Access the application:
+Access the application: //for local
 Admin Dashboard: http://localhost:8000/admin
 clear cache : http://localhost:8000/optimize-clear
 storage link : http://localhost:8000/storage-link
@@ -52,7 +52,7 @@ Credentials:
 
 Live Demo
 
-Frontend: http://restaurant.gloryinternationalschool.co.in
-Admin Dashboard:http://restaurant.gloryinternationalschool.co.in/login
-clear cache : http://restaurant.gloryinternationalschool.co.in/optimize-clear
-storage link : http://restaurant.gloryinternationalschool.co.in/storage-link
+Frontend: https://demo.klues.co.in
+Admin Dashboard:https://demo.klues.co.in/login
+clear cache : https://demo.klues.co.in/optimize-clear
+storage link : https://demo.klues.co.in/storage-link
