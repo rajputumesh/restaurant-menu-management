@@ -7,6 +7,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 Route::get('/', [FrontendController::class, 'index']);
 Route::get('restaurent/menu/{id}', [FrontendController::class, 'menuList'])->name('restaurent.menu');
@@ -22,6 +23,15 @@ Route::group(['middleware' => ['auth', 'autoLogout']], function () {
         Route::resource('restaurant', RestaurantController::class);
         Route::resource('menu', FoodItemController::class);
     });
+});
+
+Route::get('optimize-clear', function () {
+    Artisan::call('optimize:clear');
+    return back();
+});
+Route::get('storage-link', function () {
+    Artisan::call('storage:link');
+    return back();
 });
 
 Route::fallback(function () {
