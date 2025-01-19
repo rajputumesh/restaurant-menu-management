@@ -1,7 +1,6 @@
 Technical Stack
 
     Backend Framework: Laravel 10
-    Admin Dashboard: Filament Admin Panel
     Database: MySQL
     Frontend: Blade templates
     Caching: Laravel's File Cache
